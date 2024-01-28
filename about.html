@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>Document</title>
+    <style>
+        #pageheader{
+            background-image: url(images/about-background-image.jpg);
+            width:100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: top 35% right 0;
+            height:40vh;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 23px;
+            font-weight: bold;
+            font-style: italic;
+            
+        }
+        #pagination{
+            margin-top:50px;
+        }
+        /* #about-head{
+            display: flex;
+            margin: 96px 110px;
+            align-items: center;
+
+        }
+        #about-head img{
+            width:50%;
+            height: 325px;
+            padding-right: 77px;
+        }
+        #about-head div{
+            width:50%;
+        }
+        #about-app{
+            text-align: center;
+        }
+        .video{
+            width:53%;
+            height:100%;
+            margin:30px auto 0 auto;
+
+        }
+        .video video{
+            width:100%;
+            height: 100%;
+            border-radius: 20px;
+        } */
+    </style>
+</head>
+<body>
+  
+    <section id="header">
+            <a href="#"><img src="images/logo2.jpg" class="logo"alt="" ></a>
+            <div>
+                <ul id="navbar">
+                    <li><a  href="index.html">Home</a></li>
+                    <li><a  href="shop.html">Shop</a></li>
+                    <li><a  href="blog.html">Blog</a></li>
+                    <li><a class="active" href="about.html">About</a></li>
+                    <!-- <li><a href="contact.html">Contact</a></li> -->
+                    <li><a href="cart.html">
+                        <nav>
+                            <i id="shooping-bag"  class="fa-solid fa-bag-shopping"></i>
+                            <div class="cartAmount"><span>0</span></div> 
+                        </nav>
+                    </a></li>
+                    <img id="close"src="images/cross-star.jpg" alt="">
+                
+                </ul>
+                <div id="mobile">
+                    <a href="cart.html"><img id="shooping-bag"src="images/shooping_bag.png" alt=""></a>
+                    <img id="bar"src="images/hamburger-menu.jpg" alt="">
+                    
+                </div>
+            </div>
+    </section>
+    <section id="pageheader">
+           
+                <div >
+                    <h2># Know us</h2>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                </div>
+              
+                    
+           
+    </section>
+    <section id="about-head">
+        <img src="images/about-head-img.png" alt="">
+        <div>
+            <h2>Who We Are?</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta quae corporis, nam nesciunt explicabo autem temporibus quia commodi. Suscipit ad praesentium accusamus, quod consectetur voluptatum ipsa dolorum aspernatur doloremque nisi eaque minus non tempore? Facere mollitia molestias accusantium incidunt dolorum culpa repudiandae provident iure dignissimos!</p>
+            <abbr title="">Create stunning images with as much or as little control as you like thanks to a choice of Basic and Creative modes</abbr>
+            <br><br>
+            <marquee bgcolor="#ccc" loop="-1" scrollamount="5" width="100%">Create stunning images with as much or as little control as you like thanks to a choice of Basic and Creative modes</marquee>
+        </div>
+    </section>
+    <section id="about-app">
+        <h1>Download Our <a href="#">App</a> </h1>
+        <div class="video">
+            <video autoplay muted loop src="images/about-video.mp4"></video>
+        </div>
+    </section>
+    <section id="features">
+        <div class="feature">
+            <img src="images/features/Feature1.jpg" alt="">
+            <h1>Quality</h1>
+        </div>
+        <div class="feature">
+            <img src="images/features/feature2.jpg" alt="">
+            <h1 id="text2">Creativity</h1>
+        </div>
+        <div class="feature">
+            <img src="images/features/feature3.jpg" alt="">
+            <h1 id="text3">Eco-Friendly</h1>
+        </div>
+        <div class="feature">
+            <img src="images/features/feature4.jpg" alt="">
+            <h1 id="text4">Save Money</h1>
+        </div>
+        <div class="feature">
+            <img src="images/features/Feature5.webp" alt="">
+            <h2 id="local">Local Artisan Support</h2>
+        </div>
+        <div class="feature">
+            <img src="images/features/Feature6.jpg" alt="">
+            <h1 id="text5">Online Order</h1>
+        </div>
+    </section>
+    <section id="newsletter" class="section-m1">
+        <div class="newstext">
+            <h4>Sign Up For Newsletters</h4>
+            <p>Get E-mail updates about our latest shop and <span>special offers.</span></p>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="Enter your email address"name="" id="">
+             <button>Sign Up</button>
+        </div>
+    </section>
+   
+    <footer class="sectionFooter">
+        <div class="col col-first">
+            <h4>Contact</h4>
+            <p> <strong>Address:</strong> 562Wellington Road,Street 32,Son Francisco</p>
+            <p> <strong>Phone:</strong> +01 2222 365 /(+91) 01 2345 6789</p>
+            <p> <strong>Hours:</strong> 10:00 - 18:00,Mon - Sat</p>
+            <div class="follow">
+                <h4>Follow us</h4>
+                <div class="icon">
+                    <img src="images/social-media-logo/facebook.png" alt="">
+                    <img src="images/social-media-logo/insta.png" alt="">
+                    <img src="images/social-media-logo/twitter.png" alt="">
+                    <img src="images/social-media-logo/youtube.png" alt="">
+                    <img src="images/social-media-logo/whats-app.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Condition</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <img src="images/download-image1.png" alt="">
+                <img class="row-img2"src="images/download-image2.png" alt="">
+            </div>
+            <p>Secured Payment Gateways</p>
+            <img id="payment-app"src="images/pay image1.jpg" alt="">
+
+        </div>
+        <div class="copy-right">
+            <p>© Best Homemade Unique Product Website</p>
+        </div>
+    </footer>
+
+    
+    <script src="script1.js"></script>
+   
+    
+</body>
+</html>

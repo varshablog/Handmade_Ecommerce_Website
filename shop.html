@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>Document</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200&family=Poppins:wght@300&display=swap');
+        
+        /* body { */
+            /* margin: 0; */
+            /* padding: 0; */
+            /* height: 100vh; */
+            /* display: flex; */
+            /* justify-content: center; */
+            /* align-items: center; */
+            /* background: #23E3C9; */
+        /* } */
+
+        .slider {
+            width:100%;
+            height: 500px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .slides {
+            display: flex;
+            /* height: 500px; */
+            width: 500%;
+        }
+
+        .slides input {
+            display: none;
+        }
+
+        .slide {
+            width: 20%;
+            transition: 1s;
+        }
+
+        /* .slide img {
+            width: 800px;
+            height: 500px;
+        } */
+        .sample{
+            /* width:100%; */
+            background-image: url(images/shop-background.jpg); 
+            background-repeat: no-repeat;
+            background-size: cover;
+            height:500px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 19px;
+            font-weight: bold;
+            font-style: italic;
+        }
+        .sample img{
+           
+            width: 167px;
+            height: 146px;
+            margin-left: 43px;
+        }
+        .first{
+            /* width:100%; */
+            background-image: url(images/sadi-gonda.jpg); 
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 0px -109px;
+            /* height:60vh; */
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            
+            font-weight: bold;
+            font-style: italic;
+        }
+        #firstest {
+            display: flex;
+            align-items: center;
+            width: 30%;
+            height: 46%;
+            /* border: 2px solid black; */
+            border-radius: 10px;
+            /* box-shadow: 20px 20px 30px grey; */
+            box-shadow: -4px 2px 30px 42px rgb(161, 164, 162) inset;
+            /* margin-top:-222px; */
+            color: midnightblue;
+            text-align: center;
+        }
+        #firstest:hover{
+            box-shadow:inset 0 -1em 3em rgba(0,0,0,1.2), 0 0 0 2px rgb(245,245,245), 1.3em 1.3em 2em rgba(0,0,0,0.4);
+           
+        }
+        .inner-firstest{
+            margin: 20px 30px;
+        }
+        #firstest h2{
+            font-size: 27px;
+        }
+        #firstest button{
+            border: 0px solid black;
+            width: 104px;
+            height: 26px;
+            border-radius: 8px;
+            font-size: 15px;
+        }
+        #firstest button:hover{
+            background-color: rosybrown;
+            color: cornsilk;
+        }
+        #secondest{
+            display: flex;
+            align-items: center;
+            width: 30%;
+            height: 46%;
+            border-radius: 10px;
+            /* margin-top:-222px; */
+            color: currentcolor;
+            text-align: center;
+            box-shadow: -4px 2px 30px 42px rgb( 214 168 208) inset;
+            /* box-shadow:inset 0 -1em 3em rgba(0,0,0,1.2), 0 0 0 2px rgb(245,245,245), 1.3em 1.3em 2em rgba(0,0,0,0.4); */
+        }
+        #secondest:hover{
+            box-shadow: inset 0 -1em 3em rgb(178 74 78), 0 0 0 2px rgb(245,245,245), 1.3em 1.3em 2em rgba(0,0,0,0.4);
+        }
+        #secondest h2{
+            font-size: 25px;
+        }
+        #secondest button{
+            border: 0px solid black;
+            width: 104px;
+            height: 26px;
+            border-radius: 8px;
+            font-size: 15px;
+        }
+        #thirddest{
+            display: flex;
+            align-items: center;
+            width: 30%;
+            height: 46%;
+            border-radius: 10px;
+            /* margin-top:-222px; */
+            color: currentcolor;
+            text-align: center;
+            box-shadow: 0px 2px 82px 42px rgb(126 120 120) inset;
+            transition-duration: 1s;
+        }
+        /* #thirddest:hover{
+            box-shadow: inset 0 -1em 3em rgb(204, 99, 105), 0 0 0 2px rgb(245,245,245), 1.3em 1.3em 2em rgba(0,0,0,0.4);
+        } */
+        #fourdest{
+            display: flex;
+            align-items: center;
+            width: 30%;
+            height: 46%;
+            border-radius: 10px;
+            /* margin-top:-222px; */
+            color: currentcolor;
+            text-align: center;
+            box-shadow: 0px 2px 82px 42px rgb(126 120 120) inset;
+            transition-duration: 1s;
+        }
+        .second{
+            background-image: url(images/handmade-jwellery.jpg); 
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* background-position: 0px -109px; */
+            /* height:60vh; */
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-style: italic;
+        }
+        .third{
+            background-image: url(images/Terracotta_product.jpg); 
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* background-position: 0px -109px; */
+            /* height:60vh; */
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .fourts{
+            background-image: url(images/crafting.jpeg); 
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* background-position: 0px -109px; */
+            /* height:60vh; */
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        /* css for manual slide navigation */
+        .navigation-manual {
+            position: absolute;
+            width: 100%;
+            margin-top: -66px;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .manual-btn {
+            border: 2px solid #40D3DC;
+            padding: 5px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 1s;
+        }
+
+        .manual-btn:not(:last-child) {
+            margin-right: 40px;
+        }
+
+        .manual-btn:hover {
+            background: #40D3DC;
+        }
+
+        #radio1:checked~.sample {
+            margin-left: 0;
+        }
+
+        #radio2:checked~.sample {
+            margin-left:-20%;
+        }
+
+        #radio3:checked~.sample {
+            margin-left:-40%;
+        }
+
+        #radio4:checked~.sample{
+            margin-left: -60%;
+        }
+        #radio5:checked~.sample{
+            margin-left: -80%;
+        }
+
+
+        /* css for automatic navigation */
+        .navigation-auto {
+            position: absolute;
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            margin-top: 434px;
+        }
+
+        .navigation-auto div {
+            border: 2px solid #40D3DC;
+            padding: 5px;
+            border-radius: 10px;
+            transition: 1s;
+        }
+
+        .navigation-auto div:not(:last-child) {
+            margin-right: 40px;
+        }
+
+        #radio1:checked~.navigation-auto .auto-btn1 {
+            background: #40D3DC;
+        }
+
+        #radio2:checked~.navigation-auto .auto-btn2 {
+            background: #40D3DC;
+        }
+
+        #radio3:checked~.navigation-auto .auto-btn3 {
+            background: #40D3DC;
+        }
+
+        #radio4:checked~.navigation-auto .auto-btn4 {
+            background: #40D3DC;
+        }
+        #radio5:checked~.navigation-auto .auto-btn5 {
+            background: #40D3DC;
+        }
+
+        .prev,
+        .nxt {
+            cursor: pointer;
+            position: absolute;
+            top: 30%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: black;
+            font-weight: bold;
+            font-size: 34px;
+            transition: 0.6s ease;
+            border-radius: 0px 3px 3px 0px;
+            user-select: none;
+        }
+
+        .nxt {
+            right: 0;
+            border-radius: 0px 3px 3px 0px;
+        }
+
+        .prev:hover,
+        .nxt:hover {
+            background-color: rgb(87, 73, 73);
+        }
+
+        .prev {
+            left: 0;
+            border-radius: 0px 3px 3px 0px;
+        }
+        .productsCategory{
+            text-align: center;
+            font-size: 40px;
+            font-family: 'Mulish', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div id="fullBody"> -->
+    <section id="header">
+        <a href="#"><img src="images/logo2.jpg" class="logo" alt=""></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <!-- <li><a href="contact.html">Contact</a></li> -->
+                <li><a href="cart.html">
+                    <nav>
+                        <i id="shooping-bag"  class="fa-solid fa-bag-shopping"></i>
+                        <div class="cartAmount"> <span>0</span></div> 
+                    </nav>
+                </a></li>
+                <img id="close" src="images/cross-star.jpg" alt="">
+
+            </ul>
+            <div id="mobile">
+                <a href="cart.html"><img id="shooping-bag" src="images/shooping_bag.png" alt=""></a>
+                <img id="bar" src="images/hamburger-menu.jpg" alt="">
+
+            </div>
+        </div>
+    </section>
+    <section id="pageheader">
+        <!-- starting la 4 radio button aani 4 image add kele html page la -->
+        <!-- image slider stsrt -->
+        <div class="slider">
+            <div class="slides">
+                <!-- radio buttons start -->
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+                <input type="radio" name="radio-btn" id="radio5">
+                <!-- radio buttons end -->
+                <!-- slide images start -->
+                <div class="slide sample">
+                    <div>
+                        <h3>Select Your New & Unique Handmade Product</h3>
+                        <p>Save more with coupons & up to 70% off!</p>
+                    </div>
+                    <div>
+                        <img src="images/shop-heart.jpg" alt="">
+                    </div>
+                </div>
+                <div class="slide first">
+                    <div id="firstest">
+                        <div class="inner-firstest">
+                             <h2>Saree Tassels Design</h2>
+                             <p>See more ideas about saree tassels designs, saree kuchu designs, saree tassels.</p>
+                             <button id="btn">Shop Now</button>
+                        </div>
+                    </div>
+                    <!-- <img src="images/sadi-gonda.jpg" alt=""> -->
+                </div>
+                <div class="slide second">
+                    <div id="secondest">
+                        <div class="inner-secondest">
+                             <h2>Handmade Jewellery</h2>
+                             <p>See more ideas about saree tassels designs, saree kuchu designs, saree tassels.</p>
+                             <button id="bts">Shop Now</button>
+                        </div>
+                    </div>
+                    <!-- <img src="images/shubhangi.jpeg" alt=""> -->
+                </div>
+                <div class="slide third">
+                    <div id="thirddest">
+                        <div class="inner-thirddest">
+                             <h2>Terracoata Items</h2>
+                             <p>See more ideas about saree tassels designs, saree kuchu designs, saree tassels.</p>
+                             <button id="tera">Shop Now</button>
+                        </div>
+                    </div>
+                    <!-- <img src="images/amruta.jpeg" alt=""> -->
+                </div>
+                <div class="slide fourts">
+                    <div id="fourdest">
+                        <div class="inner-fourdest">
+                             <h2>Home Decor Items</h2>
+                             <p>See more ideas about saree tassels designs, saree kuchu designs, saree tassels.</p>
+                             <button id="home">Shop Now</button>
+                        </div>
+                    </div>
+                    <!-- <img src="images/varsha.jpeg" alt=""> -->
+                </div>
+        
+                <!-- slide images end -->
+                <!-- automatic navigation start -->
+                <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                    <div class="auto-btn4"></div>
+                    <div class="auto-btn5"></div>
+                </div>
+                <!-- automatic navigation end -->
+
+
+            </div>
+            <!-- Manual navigation start -->
+            <div class="navigation-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+                <label for="radio5" class="manual-btn"></label>
+
+            </div>
+            <!-- Manual navigation end -->
+            <a class="prev">&#10094;</a>
+            <a class="nxt">&#10095;</a>
+        </div>
+
+       
+
+    </section>
+    <!-- </div> -->
+    <h1 class="productsCategory">Products</h1>
+    <section id="product1">
+        <div class="pro-container">
+            <div id="part1">
+                <div class="pro" onclick="window.location.href='/sproduct.html';">
+                    <img class="image" src="images/sProduct-images/MainWallHanging.jpg" alt="">
+                    <div class="desc">
+                        <h3 class="products-titling">Wall Hanging</h3>
+                        <div class="star">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                        </div>
+                        <h4>Rs.<span>900</span></h4>
+                    </div>
+                    <img id="addtochart" class="addtocart" src="images/Home-decor/AddToChart.png" alt="">
+                </div>
+                <div class="pro" onclick="window.location.href='/sproduct1.html';">
+                    <img class="image" src="images/sProduct-images/Handmade-earing.jpg" alt="">
+                    <div class="desc">
+                        <h3 class="products-titling">Earing</h3>
+                        <div class="star">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                        </div>
+                        <h4>Rs.<span>700</span></h4>
+                    </div>
+                    <img id="addtochart" class="addtocart" src="images/Home-decor/AddToChart.png" alt="">
+                </div>
+                <div class="pro" onclick="window.location.href='/sproduct2.html';">
+                    <img class="image" src="images/sProduct-images/Terracotta cups.jpg" alt="">
+                    <div class="desc">
+                        <h3 class="products-titling">Terracotta Cups</h3>
+                        <div class="star">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                        </div>
+                        <h4>Rs.<span>1000</span></h4>
+                    </div>
+                    <img id="addtochart" class="addtocart" src="images/Home-decor/AddToChart.png" alt="">
+                </div>
+                <div class="pro" onclick="window.location.href='/sproduct3.html';">
+                    <img class="image" src="images/sProduct-images/haldi-jewellery.jpg" alt="">
+                    <div class="desc">
+                        <h3 class="products-titling">Haldi Jewellery</h3>
+                        <div class="star">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                        </div>
+                        <h4>Rs.<span>1050</span></h4>
+                    </div>
+                    <img id="addtochart" class="addtocart"src="images/Home-decor/AddToChart.png" alt="">
+                </div>
+            </div>
+            <div id="part2">
+                <div class="pro" onclick="window.location.href='/sproduct4.html';">
+                    <img class="image" src="images/sProduct-images/terra-coata-jewelry.JPG" alt="">
+                    <div class="desc">
+                        <h3 class="products-titling">Terracotta Jewellery</h3>
+                        <div class="star">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                        </div>
+                        <h4>Rs.<span>450</span></h4>
+                    </div>
+                    <img id="addtochart"class="addtocart" src="images/Home-decor/AddToChart.png" alt="">
+                </div>
+                <div class="pro" onclick="window.location.href='/sproduct5.html';">
+                    <img class="image" src="images/sProduct-images/BlouseDesign.jpg" alt="">
+                    <div class="desc">
+                        <h3 class="products-titling">Blouse Design</h3>
+                        <div class="star">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                        </div>
+                        <h4>Rs.<span>620</span></h4>
+                    </div>
+                    <img id="addtochart"class="addtocart" src="images/Home-decor/AddToChart.png" alt="">
+                </div>
+                <div class="pro" onclick="window.location.href='/sproduct6.html';">
+                    <img class="image" src="images/sProduct-images/handmadebags.jpg" alt="">
+                    <div class="desc">
+                        <h3 class="products-titling">Handmade Bags</h3>
+                        <div class="star">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                        </div>
+                        <h4>Rs.<span>1800</span></h4>
+                    </div>
+                    <img id="addtochart"class="addtocart" src="images/Home-decor/AddToChart.png" alt="">
+                </div>
+                <div class="pro" onclick="window.location.href='/sproduct7.html';">
+                    <img class="image" src="images/sProduct-images/handmadewallet.jpg" alt="">
+                    <div class="desc">
+                        <h3 class="products-titling">Handmade Wallet</h3>
+                        <div class="star">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                        </div>
+                        <h4>Rs.<span>2300</span></h4>
+                    </div>
+                    <img id="addtochart" class="addtocart"src="images/Home-decor/AddToChart.png" alt="">
+                </div>
+            </div>
+
+        </div>
+        <!-- </section> -->
+
+        <!-- <section id="product1">
+        <h1>Jewellery for every occasion</h1>
+        <h3>Handmade jewelry that always makes you happy</h3> -->
+        <div class="pro-container">
+            <div id="part1">
+                <div class="pro">
+                    <img class="image" src="images/sProduct-images/pot-image.jpg" alt="">
+                    <div class="desc">
+                        <h3 class="products-titling">Pot</h3>
+                        <div class="star">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                        </div>
+                        <h4>Rs.<span>1000</span></h4>
+                    </div>
+                    <img id="addtochart"class="addtocart" src="images/Home-decor/AddToChart.png" alt="">
+                </div>
+                <div class="pro">
+                    <img class="image" src="images/sProduct-images/Lippan-art-product.jpg" alt="">
+                    <div class="desc">
+                        <h3 class="products-titling">Lippan Art</h3>
+                        <div class="star">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                        </div>
+                        <h4>Rs.<span>600</span></h4>
+                    </div>
+                    <img id="addtochart"class="addtocart" src="images/Home-decor/AddToChart.png" alt="">
+                </div>
+                <div class="pro">
+                    <img class="image" src="images/Jewellery/img3.jpg" alt="">
+                    <div class="desc">
+                        <h3 class="products-titling">Roshanara Onyx Earrings</h3>
+                        <div class="star">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                        </div>
+                        <h4>Rs.<span>500</span></h4>
+                    </div>
+                    <img id="addtochart"class="addtocart" src="images/Home-decor/AddToChart.png" alt="">
+                </div>
+                <div class="pro">
+                    <img class="image" src="images/Jewellery/img4.jpg" alt="">
+                    <div class="desc">
+                        <h3 class="products-titling">Kataka Kangan</h3>
+                        <div class="star">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                        </div>
+                        <h4>Rs.<span>1400</span></h4>
+                    </div>
+                    <img id="addtochart"class="addtocart" src="images/Home-decor/AddToChart.png" alt="">
+                </div>
+            </div>
+            <div id="part2">
+                <div class="pro">
+                    <img class="image" src="images/Jewellery/img5.jpg" alt="">
+                    <div class="desc">
+                        <h3 class="products-titling">Ruby Ekadanta Pendant</h3>
+                        <div class="star">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                        </div>
+                        <h4>Rs.<span>1200</span></h4>
+                    </div>
+                    <img id="addtochart"class="addtocart" src="images/Home-decor/AddToChart.png" alt="">
+                </div>
+                <div class="pro">
+                    <img  class="image"src="images/Jewellery/img6.jpg" alt="">
+                    <div class="desc">
+                        <h3 class="products-titling">Ruhe Labradorite Pendant</h3>
+                        <div class="star">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                        </div>
+                        <h4>Rs.<span>4000</span></h4>
+                    </div>
+                    <img id="addtochart"class="addtocart" src="images/Home-decor/AddToChart.png" alt="">
+                </div>
+                <div class="pro">
+                    <img class="image" src="images/Jewellery/img7.jpg" alt="">
+                    <div class="desc">
+                        <h3 class="products-titling">Abendrot Labradorite Ring</h3>
+                        <div class="star">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                        </div>
+                        <h4>Rs.<span>3500</span></h4>
+                    </div>
+                    <img id="addtochart" class="addtocart"src="images/Home-decor/AddToChart.png" alt="">
+                </div>
+                <div class="pro">
+                    <img class="image" src="images/Jewellery/img8.jpg" alt="">
+                    <div class="desc">
+                        <h3 class="products-titling">Fluorite and Pearl Necklace</h3>
+                        <div class="star">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                            <img src="images/Home-decor/starIcon.png" alt="">
+                        </div>
+                        <h4>Rs.<span>2500</span></h4>
+                    </div>
+                    <img id="addtochart" class="addtocart"src="images/Home-decor/AddToChart.png" alt="">
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section id="pagination">
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
+    </section>
+
+    <section id="newsletter" class="section-m1">
+        <div class="newstext">
+            <h4>Sign Up For Newsletters</h4>
+            <p>Get E-mail updates about our latest shop and <span>special offers.</span></p>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="Enter your email address" name="" id="">
+            <button>Sign Up</button>
+        </div>
+    </section>
+    <footer class="sectionFooter">
+        <div class="col col-first">
+            <h4>Contact</h4>
+            <p> <strong>Address:</strong> 562Wellington Road,Street 32,Son Francisco</p>
+            <p> <strong>Phone:</strong> +01 2222 365 /(+91) 01 2345 6789</p>
+            <p> <strong>Hours:</strong> 10:00 - 18:00,Mon - Sat</p>
+            <div class="follow">
+                <h4>Follow us</h4>
+                <div class="icon">
+                    <img src="images/social-media-logo/facebook.png" alt="">
+                    <img src="images/social-media-logo/insta.png" alt="">
+                    <img src="images/social-media-logo/twitter.png" alt="">
+                    <img src="images/social-media-logo/youtube.png" alt="">
+                    <img src="images/social-media-logo/whats-app.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Condition</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <img src="images/download-image1.png" alt="">
+                <img class="row-img2" src="images/download-image2.png" alt="">
+            </div>
+            <p>Secured Payment Gateways</p>
+            <img id="payment-app" src="images/pay image1.jpg" alt="">
+
+        </div>
+        <div class="copy-right">
+            <p>© Best Homemade Unique Product Website</p>
+        </div>
+    </footer>
+   
+    <script >
+        
+        var counter=1;
+        setInterval(function(){
+            document.getElementById('radio'+counter).checked=true;
+            counter++;
+            if(counter>5){
+               
+                  counter=1;
+                
+            }
+        },4000);
+        let idx=document.getElementById('btn');
+        let idx1=document.getElementById('bts');
+        let idx2=document.getElementById('tera');
+        let idx3=document.getElementById('home');
+        let img=document.getElementsByClassName('image');
+        idx.addEventListener('click',()=>{
+            console.log("jsg");
+            img[0].src="images/cross-star.png";
+        })
+       
+        idx1.addEventListener('click',()=>{
+            console.log("jsg");
+            img[0].src="images/Jewellery/jw1.jpg";
+            img[1].src="images/Jewellery/bangles1.jpg";
+            img[2].src="images/Jewellery/braslet1.jpg";
+            img[3].src="images/Jewellery/earing2.jpg";
+            img[4].src="images/Jewellery/jw2.jpg";
+            img[5].src="images/Jewellery/bangles2.jpg";
+            img[6].src="images/Jewellery/braslet2.jpg";
+            img[7].src="images/Jewellery/earing1.jpg";
+            img[8].src="images/Jewellery/braslet3.jpg";
+            img[9].src="images/Jewellery/bangles3.jpg";
+            img[10].src="images/Jewellery/jw3.jpg";
+            img[11].src="images/Jewellery/jw4.jpg";
+
+        })
+        idx2.addEventListener('click',()=>{
+            console.log("jsg");
+            img[0].src="images/terracoata_jewellery/terracoata-light.jpg";
+            img[1].src="images/terracoata_jewellery/terracoata-light2.jpg";
+            img[2].src="images/terracoata_jewellery/necklace1.jpg";
+            img[3].src="images/terracoata_jewellery/earing2.jpg";
+            img[4].src="images/terracoata_jewellery/terracoata-pot1.jpg";
+            img[5].src="images/terracoata_jewellery/oil-lamp.jpg";
+            img[6].src="images/terracoata_jewellery/necklace3.jpg";
+            img[7].src="images/terracoata_jewellery/earing1.jpg";
+            img[8].src="images/terracoata_jewellery/earing3.jpg";
+            img[9].src="images/terracoata_jewellery/terracoata-pot2.jpg";
+            img[10].src="images/terracoata_jewellery/necklace2.jpg";
+            img[11].src="images/terracoata_jewellery/pot.jpg";
+        })
+        idx3.addEventListener('click',()=>{
+            console.log("jsg");
+            img[0].src="images/Home-decor/hw8.jpg";
+            img[1].src="images/Home-decor/hw9.jpg";
+            img[2].src="images/Home-decor/hw2.jpg";
+            img[3].src="images/Home-decor/hw11.jpg";
+            img[4].src="images/Home-decor/hw1.jpg";
+            img[5].src="images/Home-decor/hw4.jpg";
+            img[6].src="images/Home-decor/hw3.jpg";
+            img[7].src="images/Home-decor/hw10.jpg";
+            img[8].src="images/Home-decor/hw6.jpg";
+            img[9].src="images/Home-decor/hw7.jpg"; 
+            img[10].src="images/Home-decor/hw5.jpg";
+            img[11].src="images/Home-decor/hw12.jpg";
+        })
+    
+    </script>
+    <script src="script1.js"></script>
+
+</body>
+
+</html>

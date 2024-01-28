@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>Document</title>
+    <style>
+        
+        @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200&family=Poppins:wght@300&display=swap');
+         
+          body{
+            background-color: whitesmoke;
+          }
+          .active{
+            box-shadow: 3px 5px 24px 10px grey;
+            margin-bottom: 38px;
+            background-color: aliceblue;
+          }
+        #pageheader {
+            background-image: url(images/cart-background-image.jpg);
+            width: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 1px 53px;
+            ;
+            height: 45vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 23px;
+            font-weight: bold;
+            font-style: italic;
+
+        }
+
+        #pagination {
+            margin-top: 50px;
+        }
+
+        #navbar nav {
+            background-color: white;
+        }
+        #navbar li a:hover,
+        #navbar  li a.active{
+            color:black;
+        }
+        #cart {
+            /* border: 1px solid; */
+            margin-top: 120px;
+            margin-left: 61px;
+            margin-right: 61px;
+            display: flex;
+            font-family: 'Mulish', sans-serif;
+            margin-bottom: 132px;
+           
+            #products-items {
+
+                width: 60%;
+               padding:0 23px;
+                margin-right:11px;
+                box-shadow: 1px 1px 3px 1px grey;
+                background-color: white;
+
+
+
+                .product-items {
+                    display: flex;
+                 
+                    padding-bottom: 20px;
+                    border-bottom: 1px solid gainsboro;
+
+
+                    .img {
+                        margin: 12px;
+
+                        & img {
+                            width: 335px;
+                            height: 204px;
+                            box-shadow: 6px 5px 12px 0px grey;
+                        }
+                    }
+
+                    .product-info {
+                        margin-left:56px;
+                        .delete-item {
+                            display: flex;
+                            .update{
+                                display: flex;
+                                list-style:none;
+                                align-items: center;
+                                & li{
+                                    & input{
+                                        height: 23px;
+                                        width: 43px;
+                                        text-align: center;
+                                    }
+                                    & button{
+                                        height: 28px;
+                                        width: 43px;
+                                        cursor: pointer;
+                                    }
+                                }
+                            }
+                            #delete-logo{
+                                padding-right: 11px;
+                            }
+                            .remove-item{
+                                margin-right:84px;
+                            }
+                        }
+                        .noOfPiece{
+                            text-align: end;
+                             margin-top: -15px;
+                        }
+                    }
+                }
+            }
+            .total-amount{
+                width:40%;
+               
+                .amount{
+                    padding: 5px 23px;
+                    box-shadow: 6px 5px 12px 0px grey;
+                    background-color: white;
+
+                    .product-am{
+                        display: flex;
+                        justify-content: space-between;
+                        margin-bottom: -30px;
+                    }
+                    .productsNames{
+                        display: flex;
+                        justify-content: space-between;
+                        margin-bottom: -28px;
+                    }
+                    .productsCategories{
+                        display: flex;
+                        justify-content: space-between;
+                        margin-bottom: -20px;
+                    }
+                    .shipping-charge{
+                        display: flex;
+                        justify-content: space-between;
+                        border-bottom: 1px solid gainsboro;
+                    }
+                    .incliding-rate{
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                    & button{
+                        margin-bottom: 14px;
+                        padding:8px 6px;
+                        cursor: pointer;
+                    }
+                }
+                .coupan{
+                    
+                    margin-top: 23px;
+                    padding: 5px 23px;
+                    box-shadow: 6px 5px 12px 0px grey; 
+                    background-color: white;
+                   
+
+                    .coupan-title{
+                        display: flex;
+                        justify-content: space-between;
+                        .down-logo {
+                            & i{
+                              cursor: pointer;
+                            }
+                        }
+                    }
+                    .user-click{
+                        & input{
+                           width:100%;
+                           height:29px;
+                        }
+                        .success-failure{
+                            margin-top:0px;
+                        }
+                        .Apply-btn{
+                            padding: 5px 7px;
+                            margin-bottom: 9px;
+                        }
+                    }
+                }
+                .delivery{
+                    padding: 5px 23px;
+                    margin: 23px 0;
+                    box-shadow: 6px 5px 12px 0px grey;  
+                    background-color: white;
+   
+                    
+                    #delivery-date{
+                        margin-bottom: 13px;
+                    }
+                }
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <section id="header">
+        <a href="#"><img src="images/logo2.jpg" class="logo" alt=""></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <!-- <li><a href="contact.html">Contact</a></li> -->
+                <li><a class="active" href="cart.html">
+                    <nav>
+                        <i id="shooping-bag"  class="fa-solid fa-bag-shopping"></i>
+                        <div class="cartAmount"><span>0</span></div> 
+                    </nav>
+                </a></li>
+                <img id="close" src="images/cross-star.jpg" alt="">
+
+            </ul>
+            <div id="mobile">
+                <a href="cart.html"><img id="shooping-bag" src="images/shooping_bag.png" alt=""></a>
+                <img id="bar" src="images/hamburger-menu.jpg" alt="">
+
+            </div>
+        </div>
+    </section>
+    <!-- <section id="pageheader">
+           
+                <div >
+                    <h2># readmore</h2>
+                      <p>Read all case studies about our product</p>
+                </div>
+              
+                    
+           
+    </section> -->
+    <section id="cart">
+        <div id="products-items">
+            <h2>Cart Items</h2>
+            <!-- <div class="product-items active">
+                <div class="img">
+                    <img src="images/terracoata_jewellery/earing3.jpg" alt="">
+                </div>
+                <div class="product-info">
+
+                    <h2 class="product-name">Terracotta Earing</h2>
+                    
+                    <h4 class="product-category">Category:<span> Terracoata Jewellery</span></h4>
+                    <h4 class="price">Price:<span> Rs 500</span></h4>
+                    
+                    <div class="delete-item">
+                        <h4 class="delete-logo"><i class="fa-solid fa-trash-can"></i></h4>
+                        <h4 class="remove-item">Remove Item</h4>
+                        <div class="update">
+                            
+                                <li><button class="increseBtn"><i class="fa-solid fa-plus"></i></button></li>
+                                <li><input type="number" class="input" value="1"></li>
+                                <li><button class="decreseBtn"><i class="fa-solid fa-minus"></i></button></li>
+                           
+                        </div>
+                    </div>
+                    <h5 class="noOfPiece">How many Piece</h5>
+
+                </div>
+                
+            </div> -->
+            <!-- <div class="product-items">
+                <div class="img">
+                    <img src="images/terracoata_jewellery/earing3.jpg" alt="">
+                </div>
+                <div class="product-info">
+
+                    <h2 class="product-name">Terracotta Earing</h2>
+                   
+                    <h4 class="product-category">Category:<span> Terracoata Jewellery</span></h4>
+                    <h4 class="price">Price:<span> Rs 500</span></h4>
+                    
+                    <div class="delete-item">
+                        <h4 class="delete-logo"><i onclick="deleteItemFunction()"class="fa-solid fa-trash-can"></i></h4>
+                        <h4 class="remove-item" onclick="deleteItemFunction()">Remove Item</h4>
+                        <div class="update">
+                            
+                                <li><button class="increseBtn"><i class="fa-solid fa-plus"></i></button></li>
+                                <li><input type="number" class="input" value="1"></li>
+                                <li><button class="decreseBtn"><i class="fa-solid fa-minus"></i></button></li>
+                           
+                        </div>
+                    </div>
+                    <h5 class="noOfPiece">How many Piece</h5>
+
+                </div>
+                
+            </div> -->
+        </div>
+        <div class="total-amount">
+            <div class="amount">
+                <h4 class="title">The Total Amount Of</h4>
+                <div class="productsNames">
+                    <h4>Name</h4>
+                    <h3>bkhm</h3>
+
+                </div>
+                <div class="productsCategories">
+                    <h4>Category</h4>
+                    <h3>gjh</h3>
+                    
+                </div>
+                <div class="product-am">
+                    <h4>Amount</h4>
+                    <h3 class="rate">Rs <span>345</span></h3>
+                </div>
+                <div class="shipping-charge">
+                    <h4>Shipping Charge</h4>
+                    <h3 class="shipping-rate">Rs <span>467</span></h3>
+                </div>
+                <div class="incliding-rate">
+                    <h4>The total amount of (including VAT)</h4>
+                    <h4 class="includes">Rs.<span>110</span></h4>
+                </div>
+                <button>CHECKOUT</button>
+            </div>
+            <div class="coupan">
+                <div class="coupan-title">
+                    <h4>Add a discount code (optional)</h4>
+                    <h3 class="down-logo">
+                        <i onclick="downLogo()"class="fa-solid fa-chevron-right"></i>
+                    </h3>
+                    <!-- <i onclick="downLogo()"class="fa-solid fa-chevron-down"></i> -->
+                </div>
+                <div class="user-click"></div>
+                <h4 class="success-failure"></h4>
+            </div>
+            <div class="delivery">
+                <h4>Expected delivery date</h4>
+                <div id="delivery-date">july 27th 2023-july 29th 2023</div>
+            </div>
+        </div>
+        
+    </section>
+
+    <footer class="sectionFooter">
+        <div class="col col-first">
+            <h4>Contact</h4>
+            <p> <strong>Address:</strong> 562Wellington Road,Street 32,Son Francisco</p>
+            <p> <strong>Phone:</strong> +01 2222 365 /(+91) 01 2345 6789</p>
+            <p> <strong>Hours:</strong> 10:00 - 18:00,Mon - Sat</p>
+            <div class="follow">
+                <h4>Follow us</h4>
+                <div class="icon">
+                    <img src="images/social-media-logo/facebook.png" alt="">
+                    <img src="images/social-media-logo/insta.png" alt="">
+                    <img src="images/social-media-logo/twitter.png" alt="">
+                    <img src="images/social-media-logo/youtube.png" alt="">
+                    <img src="images/social-media-logo/whats-app.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Condition</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <img src="images/download-image1.png" alt="">
+                <img class="row-img2" src="images/download-image2.png" alt="">
+            </div>
+            <p>Secured Payment Gateways</p>
+            <img id="payment-app" src="images/pay image1.jpg" alt="">
+
+        </div>
+        <div class="copy-right">
+            <p>© Best Homemade Unique Product Website</p>
+        </div>
+    </footer>
+    <script src="script1.js"></script>
+
+</body>
+
+</html>
